@@ -5,10 +5,6 @@ import "./Header.css";
 const Logo = image1;
 const { Option } = Select;
 
-const handleChange = (value) => {
-  value;
-};
-
 const Header = () => {
   return (
     <Row justify="space-around" align="stretch">
@@ -34,7 +30,6 @@ const Header = () => {
           style={{
             width: 136,
           }}
-          onChange={handleChange}
         >
           <Option value=" English"> English (En)</Option>
           <Option value="Indonesia">Indonesia (Ind)</Option>
