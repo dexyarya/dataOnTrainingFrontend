@@ -8,3 +8,9 @@
     font-weight: bold   ;
     margin: 0;
 }
+
+.logo{
+    width: 100%;
+    max-width: 400px;
+    
+}

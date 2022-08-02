@@ -32,12 +32,12 @@ const Header = () => {
             label: " English (En)",
           }}
           style={{
-            width: 120,
+            width: 136,
           }}
           onChange={handleChange}
         >
           <Option value=" English"> English (En)</Option>
-          <Option value="Indonesia">Indonesia (Id)</Option>
+          <Option value="Indonesia">Indonesia (Ind)</Option>
         </Select>
       </Col>
     </Row>

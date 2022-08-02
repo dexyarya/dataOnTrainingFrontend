@@ -11,11 +11,10 @@ const Login = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
   };
 
   const onFinish = () => {
-    console.log("handleSubmit", formValues);
+    formValues;
   };
 
   return (
@@ -91,7 +90,7 @@ const Login = () => {
                 <Button
                   type="primary"
                   htmlType="submit"
-                  style={{ width: 150, background: "#40b3fb" }}
+                  style={{ width: 150, background: "#40b3fb", border: "none" }}
                 >
                   Login
                 </Button>
