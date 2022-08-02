@@ -2,3 +2,27 @@
     display: flex;
     justify-content: space-between;
 }
+
+.login_text{
+    color: rgb(0, 179, 255);
+    font-weight: bold;
+    
+}
+.login_form_forgot{
+    color: rgb(0, 179, 255);
+}
+
+.footer{
+    text-align: center;
+    margin-top: 50px;
+    color:rgba(138, 138, 138, 0.685);
+}
+
+.copy_right{
+    margin: 0;
+    
+}
+.error{
+    color: red;
+}
+
