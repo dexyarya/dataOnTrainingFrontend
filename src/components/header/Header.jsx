@@ -6,7 +6,7 @@ const Logo = image1;
 const { Option } = Select;
 
 const handleChange = (value) => {
-  console.log(value);
+  value;
 };
 
 const Header = () => {
@@ -41,7 +41,6 @@ const Header = () => {
         </Select>
       </Col>
     </Row>
-    // </Card>
   );
 };
 
