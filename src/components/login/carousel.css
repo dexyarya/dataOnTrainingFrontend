@@ -1,0 +1,17 @@
+  .ant-carousel .slick-slide {
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+  }
+  .ant-carousel .slick-dots li button {
+    background: #40b3fb!important;
+    height: 17px !important;
+    border-radius: 10px !important;
+    color:#239acd !important;
+    opacity: 0.4;
+  }
+  
+  .ant-carousel .slick-dots li.slick-active button {
+    opacity: 1;
+    background: #045bf0b0!important;
+  }
