@@ -1,7 +1,7 @@
 import { Table, Card, Badge } from "antd";
 import React, { useState, useEffect, useContext } from "react";
 import "../trainingTable/TrainingTable.css";
-import instance from "../../API/API";
+import instance from "../../utils/API/API";
 import { Navigate } from "react-router-dom";
 import { AppContext } from "../../context/Context";
 import { columns } from "./AllTrainingTableViewData";

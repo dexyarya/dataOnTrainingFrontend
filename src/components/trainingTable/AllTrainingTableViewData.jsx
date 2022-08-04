@@ -1,6 +1,6 @@
 import React from "react";
 import { Rate } from "antd";
-import { covertdate } from "./convertDate";
+import { covertdate } from "../../utils/convertDate";
 
 const columns = [
   {

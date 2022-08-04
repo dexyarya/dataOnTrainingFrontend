@@ -34,7 +34,6 @@ function App() {
               <Route path="/training/:id" element={<Detail />} />
               <Route element={<ProtectedRoute />}>
                 <Route path="/training/create" element={<Create />} />
-                {/* <Route path="/training/edit/:id" element={<Edit />} /> */}
               </Route>
             </Route>
           </Routes>

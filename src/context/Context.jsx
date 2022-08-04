@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import instance from "../API/API";
+import instance from "../utils/API/API";
 export const AppContext = createContext();
 
 export const ContextWrapper = (props) => {
@@ -8,7 +8,6 @@ export const ContextWrapper = (props) => {
     isLoading: false,
     isError: false,
   });
-  //filter Section
 
   const [search, setSearch] = useState("");
   const onSearch = (e) => {
@@ -27,7 +26,6 @@ export const ContextWrapper = (props) => {
 
   useEffect(() => {
     getDataTraining(search, status, completed);
-    // getDataMyTraining();
   }, [search, status, completed]);
 
   async function getDataTraining(search = "", status, completed) {
