@@ -184,7 +184,7 @@ export const ContextWrapper = (props) => {
       if (response.status === 200) {
         message.success("Training Updated Successfully");
       }
-      window.location.reload();
+
       handleSetStateSucces("isSucces", true);
     } catch (err) {
       message.error("This is an error messageeee");
