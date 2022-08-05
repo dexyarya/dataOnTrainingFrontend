@@ -1,7 +1,7 @@
 import React from "react";
 import { Breadcrumb, Card, Row, Col, Button, Menu, Dropdown } from "antd";
 import { PlusOutlined, MoreOutlined } from "@ant-design/icons";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 function Breadcrumbs() {
   const roles = localStorage.getItem("roles");
@@ -10,6 +10,26 @@ function Breadcrumbs() {
     localStorage.clear();
     navigate("/");
   };
+  const params = useParams();
+  const pathSnippets = location.pathname.split("/").filter((i) => i);
+  const breadcrumbNameMaps = {
+    "/training/create": "Create Training",
+    ["/training/edit/" + params.id]: "Edit Training",
+  };
+
+  const extraBreadcrumbItems = pathSnippets.map((_, index) => {
+    const url = `/${pathSnippets.slice(0, index + 1).join("/")}`;
+    return (
+      <Breadcrumb.Item key={url}>{breadcrumbNameMaps[url]}</Breadcrumb.Item>
+    );
+  });
+
+  const breadcrumbItems = [
+    <Breadcrumb.Item key={"/dashboard"}>
+      <Link to="/dashboard">Dashboard</Link>
+    </Breadcrumb.Item>,
+  ].concat(extraBreadcrumbItems);
+
   const menu = (
     <Menu>
       <Menu.Item>
@@ -35,8 +55,7 @@ function Breadcrumbs() {
               marginTop: "4px",
             }}
           >
-            <Breadcrumb.Item href="">Training</Breadcrumb.Item>
-            <Breadcrumb.Item>Training Event</Breadcrumb.Item>
+            {breadcrumbItems}
           </Breadcrumb>
         </Col>
 

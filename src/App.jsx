@@ -30,7 +30,7 @@ function App() {
               <Route path="/training" element={<AllTraining />} />
               <Route element={<ProtectedRoute />}>
                 <Route
-                  path="training/create"
+                  path="/training/create"
                   element={<CreateTrainingEvent />}
                 />
                 <Route
