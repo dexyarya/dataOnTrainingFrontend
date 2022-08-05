@@ -78,7 +78,7 @@ function CardTrainingEvent(props) {
   };
 
   const handleUpdate = () => {
-    Navigate(`/edit/${id}`);
+    Navigate(`/training/edit/${id}`);
   };
 
   return (

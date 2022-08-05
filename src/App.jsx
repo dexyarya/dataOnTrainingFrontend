@@ -4,13 +4,11 @@ import "./App.css";
 import Login from "./components/login/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 import AllTraining from "./components/training/AllTraining";
-import Detail from "./components/training/detail/DetailTraining";
-import Create from "./components/create/Create";
+import CreateTrainingEvent from "./components/formTraining/CreateTrainingEvent";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ProtectedRouteAll from "./components/ProtectedRouteAll";
 import { ContextWrapper } from "./context/Context";
-import FilterSection from "./components/filterSection/FilterSection";
-import ToggleView from "./components/toggleView/ToogleView";
+import ModalView from "./components/modalView/ModalView";
 
 function App() {
   return (
@@ -18,22 +16,27 @@ function App() {
       <ContextWrapper>
         <Router>
           <Routes>
-            <Route path="/login" exact element={<Login />} />
+            <Route path="/" exact element={<Login />} />
             <Route element={<ProtectedRouteAll />}>
               <Route
                 path="dashboard"
                 element={
                   <>
                     <Dashboard />
-                    <FilterSection />
-                    <ToggleView />
+                    <ModalView />
                   </>
                 }
               />
               <Route path="/training" element={<AllTraining />} />
-              <Route path="/training/:id" element={<Detail />} />
               <Route element={<ProtectedRoute />}>
-                <Route path="/training/create" element={<Create />} />
+                <Route
+                  path="training/create"
+                  element={<CreateTrainingEvent />}
+                />
+                <Route
+                  path="/training/edit/:id"
+                  element={<CreateTrainingEvent />}
+                />
               </Route>
             </Route>
           </Routes>
