@@ -55,8 +55,7 @@
     }
     .location{
         font-size:6px;
-        /* margin-top: 6px; */
-    /* font-size: 9px; */
+    
     }
     .description{
         font-size:4px;
@@ -66,7 +65,7 @@
         font-size: 5px;
     }
     .icon{
-        /* margin-top: 2px; */
+       
         font-size: 6px;
     }
     ant-card-body {
@@ -90,7 +89,6 @@
         font-size: 4px;
     }
     .icon{
-        /* margin-top: 2px; */
         font-size: 5px;
     }
     .ant-card-body {

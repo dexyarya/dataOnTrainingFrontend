@@ -18,7 +18,6 @@ const FilterSection = () => {
       style={{
         margin: "10px",
         borderRadius: "10px",
-        paddingRight: "20px",
       }}
     >
       <Row justify="space-between" wrap>
@@ -84,7 +83,7 @@ const FilterSection = () => {
         <Col xl={2}>
           <Row style={{ marginTop: 30 }}>
             <Button onClick={handleClick}>
-              {tableViews ? <ButtonToge /> : <ButtonTog />}
+              {tableViews ? <ButtonTog /> : <ButtonToge />}
             </Button>
           </Row>
         </Col>
